@@ -1,0 +1,5 @@
+.ssh/conf.d/commons/*
+.ssh/conf.d/hosts/*
+.ssh/id_rsa*
+.ssh/known_hosts
+!.gitkeep
