@@ -42,6 +42,16 @@ elif which putclip >/dev/null 2>&1 ; then
     alias -g C='| putclip'
 fi
 
-
+##############################
 # color scheme
+##############################
+# solarized dark @see https://github.com/altercation/solarized
 source /usr/lib/sol.dark
+
+if [ -z $TMUX ]; then
+  if $(tmux has-session 2> /dev/null); then
+    tmux -2 attach
+  else
+    tmux -2
+  fi
+fi
