@@ -1,20 +1,28 @@
+##############################
 # environment variable
+##############################
 export LANG=ja_JP.UTF-8
 
+##############################
+# autoloads
+##############################
 # enable color
 autoload -Uz colors
 colors
+# auto complete
+autoload -Uz compinit
+compinit
 
+##############################
 # prompt
+##############################
 # two-lines 1:out pwd 2:input command
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 %# "
 
-# enable auto complete
-autoload -Uz compinit
-compinit
-
+##############################
 # command alias
+##############################
 alias ..='cd ..'
 alias ll='ls -al'
 alias cp="cp -i"
@@ -33,3 +41,7 @@ elif which putclip >/dev/null 2>&1 ; then
     # Cygwin
     alias -g C='| putclip'
 fi
+
+
+# color scheme
+source /usr/lib/sol.dark
