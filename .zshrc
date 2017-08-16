@@ -36,6 +36,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias grep="grep --color"
 alias ssh="ssh -F ~/.ssh/config"
+alias gip='curl ipconfig.io'
 
 # clipboard 'C'
 if which pbcopy >/dev/null 2>&1 ; then
