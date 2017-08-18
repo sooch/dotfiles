@@ -38,17 +38,18 @@ alias grep="grep --color"
 alias ssh="ssh -F ~/.ssh/config"
 alias gip='curl ipconfig.io'
 
-# clipboard 'C'
-if which pbcopy >/dev/null 2>&1 ; then
-    # Mac
-    alias -g C='| pbcopy'
-elif which xsel >/dev/null 2>&1 ; then
-    # Linux
-    alias -g C='| xsel --input --clipboard'
-elif which putclip >/dev/null 2>&1 ; then
-    # Cygwin
-    alias -g C='| putclip'
-fi
+case ${OSTYPE} in
+    darwin*)
+        # mac
+        ;;
+    linux*)
+        # linux
+        ;;
+    cygwin*)
+        # cygwin
+        alias ipconfig='ipconfig | nkf -w'
+        ;;
+esac
 
 
 ##############################
