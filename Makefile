@@ -5,4 +5,5 @@ init: # deploy this dotfiles
 	ln -vsf ${PWD}/.gitignore ${HOME}/.gitignore
 	ln -vsf ${PWD}/.tmux.conf ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
+	ln -vsf ${PWD}/.zshenv ${HOME}/.zshenv
 	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
