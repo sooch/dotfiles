@@ -1,4 +1,5 @@
 init: # deploy this dotfiles
+	ln -vsf ${PWD}/.aliases ${HOME}/.aliases
 	ln -vsf ${PWD}/.bash_profile ${HOME}/.bash_profile
 	ln -vsf ${PWD}/.bashrc ${HOME}/.bashrc
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig

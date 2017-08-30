@@ -32,26 +32,9 @@ PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 ##############################
 # command alias
 ##############################
-alias ..='cd ..'
-alias ll='ls -al'
-alias cp="cp -i"
-alias mv="mv -i"
-alias grep="grep --color"
-alias ssh="ssh -F ~/.ssh/config"
-alias gip='curl ipconfig.io'
-
-case ${OSTYPE} in
-    darwin*)
-        # mac
-        ;;
-    linux*)
-        # linux
-        ;;
-    cygwin*)
-        # cygwin
-        alias ipconfig='ipconfig | nkf -w'
-        ;;
-esac
+if [ -r .aliases ] && [ -f .aliases ] ; then
+  source .aliases
+fi
 
 
 ##############################
@@ -62,7 +45,10 @@ esac
 # @see https://github.com/altercation/solarized
 # 1. In any directory git clone.
 # 2. Set the this file path.
-source ~/src/github.com/mavnn/mintty-colors-solarized/sol.dark
+COLORSCHEME_FILE="${HOME}/src/github.com/mavnn/mintty-colors-solarized/sol.dark"
+if [ -r $COLORSCHEME_FILE ] && [ -f $COLORSCHEME_FILE ] ; then 
+  source $COLORSCHEME_FILE
+fi
 
 # Mac OSX
 # @see https://github.com/tomislav/osx-terminal.app-colors-solarized
@@ -71,7 +57,7 @@ source ~/src/github.com/mavnn/mintty-colors-solarized/sol.dark
 # 3. Select theme file in cloned directory.
 
 
-##############################
+#############################
 # tmux settings
 ##############################
 if [ -z $TMUX ]; then
