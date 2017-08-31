@@ -21,6 +21,7 @@ case ${OSTYPE} in
     cygwin*) # Cygwin
 	# Shift-JIS to UTF-8 by NKF
         alias ipconfig='ipconfig | nkf -w'
+        alias ping='ping | nkf -w'
 	# Lock Screen (Win + L)
 	alias afk="rundll32 user32.dll, LockWorkStation"
         ;;
