@@ -7,10 +7,17 @@ alias ll='ls -la'
 alias grep='grep --color=auto'
 alias zgrep='zgrep --color=auto'
 
-alias ssh="ssh -F ~/.ssh/config"
+alias ssh='ssh -F ~/.ssh/config'
 
 alias gip='curl ipconfig.io'
 
+
+# Docker
+alias dc='docker-compose'
+alias dpa='docker ps -a'
+
+
+# OS
 case ${OSTYPE} in
     darwin*) # Mac        
         # Lock Screen (Shift + Ctrl + Eject)
