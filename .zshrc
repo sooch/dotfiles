@@ -6,7 +6,7 @@ export LANG=ja_JP.UTF-8
 # PATH
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH=/usr/local/opt/openssh/bin:$PATH
-
+export PATH="~/.composer/vendor/bin:$PATH"
 
 ##############################
 # autoloads
