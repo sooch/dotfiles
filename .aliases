@@ -19,17 +19,16 @@ alias dpa='docker ps -a'
 
 # OS
 case ${OSTYPE} in
-    darwin*) # Mac        
-        # Lock Screen (Shift + Ctrl + Eject)
-        alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-        ;;
-    linux*)  # Linux
-        ;;
-    cygwin*) # Cygwin
-	# Shift-JIS to UTF-8 by NKF
-        alias ipconfig='ipconfig | nkf -w'
-        alias ping='ping | nkf -w'
-	# Lock Screen (Win + L)
-	alias afk="rundll32 user32.dll, LockWorkStation"
-        ;;
+	darwin*) # Mac
+		# Lock Screen (Shift + Ctrl + Eject)
+		alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+		;;
+	linux*)  # Linux
+		;;
+	cygwin*) # Cygwin
+		# Shift-JIS to UTF-8 by NKF
+		alias ipconfig='ipconfig | nkf -w'
+		# Lock Screen (Win + L)
+		alias afk="rundll32 user32.dll, LockWorkStation"
+		;;
 esac

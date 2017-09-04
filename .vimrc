@@ -6,9 +6,9 @@ set autoindent
 set cursorline
 
 " 行頭以外のタブ幅
-set tabstop=2
+set tabstop=4
 " 行頭でのタブ幅
-set shiftwidth=2
+set shiftwidth=4
 " ステータスバーを常に表示
 set laststatus=2
 
