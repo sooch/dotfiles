@@ -2,7 +2,7 @@
 # environment variable
 ##############################
 # Character code
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 # PATH
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH=/usr/local/opt/openssh/bin:$PATH
@@ -25,7 +25,7 @@ compinit
 ##############################
 # L1: out pwd 
 # L2: input command
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
+PROMPT="%{${fg[blue]}%}[%n@%m]%{${reset_color}%} %~
 %# "
 
 
