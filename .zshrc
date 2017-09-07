@@ -61,7 +61,7 @@ fi
 #############################
 # tmux settings
 ##############################
-if [ -z $TMUX ]; then
+if [ -z $TMUX ] && [ -z $VSCODE_PID ] ; then
 	if $(tmux has-session 2> /dev/null); then
 		tmux -2 attach
 	else
