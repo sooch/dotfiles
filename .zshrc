@@ -3,6 +3,7 @@
 ##############################
 # Character code
 export LANG=en_US.UTF-8
+# export LANG=ja_JP.UTF-8
 # PATH
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH=/usr/local/opt/openssh/bin:$PATH
@@ -33,7 +34,7 @@ PROMPT="%{${fg[blue]}%}[%n@%m]%{${reset_color}%} %~
 # command alias
 ##############################
 if [ -r .aliases ] && [ -f .aliases ] ; then
-  source .aliases
+	source .aliases
 fi
 
 
@@ -47,7 +48,7 @@ fi
 # 2. Set the this file path.
 COLORSCHEME_FILE="${HOME}/src/github.com/mavnn/mintty-colors-solarized/sol.dark"
 if [ -r $COLORSCHEME_FILE ] && [ -f $COLORSCHEME_FILE ] ; then 
-  source $COLORSCHEME_FILE
+	source $COLORSCHEME_FILE
 fi
 
 # Mac OSX
@@ -61,11 +62,11 @@ fi
 # tmux settings
 ##############################
 if [ -z $TMUX ]; then
-  if $(tmux has-session 2> /dev/null); then
-    tmux -2 attach
-  else
-    tmux -2
-  fi
+	if $(tmux has-session 2> /dev/null); then
+		tmux -2 attach
+	else
+		tmux -2
+	fi
 fi
 
 
@@ -75,7 +76,7 @@ fi
 
 # Compile if .zshrc has been updated.
 if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
-  zcompile ~/.zshrc
+	zcompile ~/.zshrc
 fi
 
 # History
