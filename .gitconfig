@@ -1,3 +1,6 @@
+[user]
+	name = sooch
+	email = tk.sooch@gmail.com
 [alias]
 	st = status -bs
 	co = checkout
