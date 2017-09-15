@@ -31,11 +31,12 @@ PROMPT="%{${fg[blue]}%}[%n@%m]%{${reset_color}%} %~
 
 
 ##############################
-# command alias
+# loading files
 ##############################
-if [ -r .aliases ] && [ -f .aliases ] ; then
-	source .aliases
-fi
+for file in ~/.{aliases,}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
 
 ##############################
@@ -79,7 +80,9 @@ if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
 	zcompile ~/.zshrc
 fi
 
+##############################
 # History
+##############################
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=100000
