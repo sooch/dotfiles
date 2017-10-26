@@ -9,7 +9,7 @@ alias zgrep='zgrep --color=auto'
 
 alias ssh='ssh -F ~/.ssh/config'
 
-alias gip='curl ipconfig.io'
+alias gip='curl ifconfig.io'
 
 
 # Docker
