@@ -1,4 +1,7 @@
-deploy: # Deploy this dotfiles
+.DEFAULT_GOAL := help
+
+
+deploy: ## Deploy this dotfiles
 	ln -vsf ${PWD}/.aliases ${HOME}/.aliases
 	ln -vsf ${PWD}/.bash_profile ${HOME}/.bash_profile
 	ln -vsf ${PWD}/.bashrc ${HOME}/.bashrc
@@ -9,8 +12,16 @@ deploy: # Deploy this dotfiles
 	ln -vsf ${PWD}/.zshenv ${HOME}/.zshenv
 	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
 
-update: # Pulling from repo
+update: ## Pulling from repo
 	git pull origin master
 
-install: update deploy # Run make update, deploy
+install: update deploy ## Run make update, deploy
 	@exec $$SHELL
+
+
+# `sort`     : When sort is deleted, the target are sorted in the order that they appear in the makefile, not in alphabetical order.
+# `36m%-XXs` : Number of `XX` is space width can be adjusted.
+.PHONY: help
+help: ## Help
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
