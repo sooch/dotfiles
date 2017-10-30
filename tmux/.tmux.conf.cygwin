@@ -1,0 +1,23 @@
+#############################
+# copy-mode usage
+# ---------------------------
+# 1. `tmux + [` to selection mode
+# 2. begin selection with `y` or `space` key
+# 3. clipboard with `y' or `enter` key
+# Its also possible on Ctrl + V as its also stored on the clipboard.
+#############################
+
+# for tmux 2.3 or less
+if-shell "[[ $TMUX_VERSION <= 2.3 ]]" '\
+	bind-key -t vi-copy v     begin-selection;\
+	bind-key -t vi-copy y     copy-pipe "cat > /dev/clipboard";\
+	bind-key -t vi-copy Enter copy-pipe "cat > /dev/clipboard";\
+'
+
+# for tmux 2.4 or higher
+if-shell "[[ $TMUX_VERSION >= 2.4 ]]" '\
+	bind-key -t copy-mode-vi v     send -X begin-selection;\
+	bind-key -t copy-mode-vi y     send -X copy-pipe-and-cancel "cat > /dev/clipboard";\
+	bind-key -t copy-mode-vi Enter send -X copy-pipe-and-cancel "cat > /dev/clipboard";\
+'
+
