@@ -1,4 +1,4 @@
 # in .bash_profile
 if [ -e ~/.bashrc ]; then
-  source ~/.bashrc
+	source ~/.bashrc
 fi
