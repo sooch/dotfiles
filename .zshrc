@@ -24,8 +24,6 @@ compinit
 ##############################
 # prompt settings
 ##############################
-# L1: out pwd 
-# L2: input command
 PROMPT="%{${fg[blue]}%}[%n@%m]%{${reset_color}%} %~
 %# "
 
@@ -42,7 +40,6 @@ unset file;
 ##############################
 # color scheme
 ##############################
-
 # Cygwin with Windows
 # @see https://github.com/altercation/solarized
 # 1. In any directory git clone.
@@ -88,4 +85,3 @@ export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
-
