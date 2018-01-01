@@ -59,7 +59,8 @@ fi
 #############################
 # tmux settings
 ##############################
-if [ -z $TMUX ] && [ -z $VSCODE_PID ] ; then
+# Check tmux command and session, VSCode does not start tmux.
+if type tmux > /dev/null 2>&1 && [ -z $TMUX ] && [ -z $VSCODE_PID ] ; then
 	if $(tmux has-session 2> /dev/null); then
 		tmux -2 attach
 	else
