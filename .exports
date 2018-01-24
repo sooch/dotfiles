@@ -1,0 +1,13 @@
+# vim as default
+export EDITOR="vim"
+
+# Language
+export LANG="en_US.UTF-8"
+
+# Composer
+PATH="~/.composer/vendor/bin:$PATH"
+
+# Prefer brew
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/openssh/bin:$PATH"
+

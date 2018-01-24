@@ -1,12 +1,4 @@
 ##############################
-# environment variable
-##############################
-# Character code
-export LANG=en_US.UTF-8
-# export LANG=ja_JP.UTF-8
-
-
-##############################
 # prompt settings
 ##############################
 # \[\e[0;34m\]DO SOMETHING\[\e[0;0m\]
@@ -17,7 +9,7 @@ PS1="\[\e[0;34m\][\u@\h]\[\e[0;0m\] \w
 ##############################
 # loading files
 ##############################
-for file in ~/.{aliases,}; do
+for file in ~/.{aliases, exports}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;

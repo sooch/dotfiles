@@ -1,15 +1,4 @@
 ##############################
-# environment variable
-##############################
-# Character code
-export LANG=en_US.UTF-8
-# export LANG=ja_JP.UTF-8
-# PATH
-export PATH=/usr/local/opt/openssl/bin:$PATH
-export PATH=/usr/local/opt/openssh/bin:$PATH
-export PATH="~/.composer/vendor/bin:$PATH"
-
-##############################
 # autoloads
 ##############################
 
@@ -31,7 +20,7 @@ PROMPT="%{${fg[blue]}%}[%n@%m]%{${reset_color}%} %~
 ##############################
 # loading files
 ##############################
-for file in ~/.{aliases,}; do
+for file in ~/.{aliases, exports}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
