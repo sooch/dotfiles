@@ -9,7 +9,7 @@ PS1="\[\e[0;34m\][\u@\h]\[\e[0;0m\] \w
 ##############################
 # loading files
 ##############################
-for file in ~/.{aliases, exports}; do
+for file in ~/.{aliases,exports}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
