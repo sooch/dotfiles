@@ -21,7 +21,7 @@ PROMPT="%{${fg[blue]}%}[%n@%m]%{${reset_color}%} %~
 # loading files
 ##############################
 for file in ~/.{aliases,exports}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
