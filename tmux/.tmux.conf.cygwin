@@ -9,7 +9,7 @@
 
 # Less than 2.4
 if-shell "[[ $TMUX_VERSION < 2.4 ]]" '\
-	bind-key -t vi-copy v     begin-selectioni;\
+	bind-key -t vi-copy v     begin-selection;\
 	bind-key -t vi-copy y     copy-pipe "cat > /dev/clipboard";\
 	bind-key -t vi-copy Enter copy-pipe "cat > /dev/clipboard";\
 '
