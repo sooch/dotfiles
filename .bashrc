@@ -46,3 +46,7 @@ if type tmux > /dev/null 2>&1 && [ -z $TMUX ] && [ -z $VSCODE_PID ] ; then
 	fi
 fi
 
+##############################
+# history
+##############################
+HISTTIMEFORMAT='%Y-%m-%dT%T%z '
