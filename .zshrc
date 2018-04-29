@@ -62,6 +62,9 @@ fi
 # zsh settings
 ##############################
 
+# Emacs style bindings (for Home/End keys...)
+bindkey -e
+
 # Compile if .zshrc has been updated.
 if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
 	zcompile ~/.zshrc
