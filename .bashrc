@@ -48,7 +48,7 @@ if type tmux > /dev/null 2>&1 && [ -z $TMUX ]; then
 		else
 			tmux -2
 		fi
-  fi
+    fi
 fi
 
 
