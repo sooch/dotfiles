@@ -52,10 +52,10 @@ fi
 if type tmux > /dev/null 2>&1 && [ -z $TMUX ]; then
 	# VSCode does not start tmux.
 	# https://github.com/Microsoft/vscode/commit/9c82ae899c79de07413af7cdbe262dbe4550abd0
-	if [ ${TERM_PROGRAM} != "vscode" ]; then
+	if [ -z "${TERM_PROGRAM}" ] || [ ${TERM_PROGRAM} != "vscode" ]; then
 		# check session
 		if $(tmux has-session 2> /dev/null); then
-			tmux -2 attach
+			tmux -2 attacha
 		else
 			tmux -2
 		fi
