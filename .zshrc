@@ -55,7 +55,7 @@ if type tmux > /dev/null 2>&1 && [ -z $TMUX ]; then
 	if [ -z "${TERM_PROGRAM}" ] || [ ${TERM_PROGRAM} != "vscode" ]; then
 		# check session
 		if $(tmux has-session 2> /dev/null); then
-			tmux -2 attacha
+			tmux -2 attach
 		else
 			tmux -2
 		fi
