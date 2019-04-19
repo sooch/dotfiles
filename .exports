@@ -19,3 +19,9 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 # - using brew
 # export ANDROID_HOME="/usr/local/Caskroom/android-sdk/{SDK_VERSION_NUMBER}"
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+# rbenv
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
+ 
