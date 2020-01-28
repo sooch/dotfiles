@@ -21,7 +21,14 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 # rbenv
-[[ -d ~/.rbenv  ]] && \
-  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+if [[ -d ~/.rbenv  ]]; then
+  export PATH=${HOME}/.rbenv/bin:${PATH}
   eval "$(rbenv init -)"
- 
+fi
+
+# nodebrew
+if [[ -f ~/.nodebrew/nodebrew ]]; then
+    export PATH=$HOME/.nodebrew/current/bin:$PATH
+fi
+
+export PATH="$HOME/.rbenv/versions/2.5.5/bin:$PATH"
