@@ -24,4 +24,10 @@ export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 [[ -d ~/.rbenv  ]] && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
- 
+
+# nodenv
+#if [ -d ~/.nodenv ]; then
+	export PATH="$HOME/.nodenv/bin:$PATH"
+	eval "$(nodenv init -)"
+#fi
+
