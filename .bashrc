@@ -56,3 +56,5 @@ fi
 # history
 ##############################
 HISTTIMEFORMAT='%Y-%m-%dT%T%z '
+HISTSIZE=100000
+
