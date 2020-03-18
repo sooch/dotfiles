@@ -16,6 +16,8 @@ alias gip='curl ifconfig.io'
 alias dc='docker-compose'
 alias dpa='docker ps -a'
 
+# terraform
+alias tf='terraform'
 
 # OS
 case ${OSTYPE} in
