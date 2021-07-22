@@ -38,6 +38,12 @@ if [ "type nodenv" > /dev/null 2>&1 ] && [ -d ~/.nodenv ]; then
 	eval "$(nodenv init -)"
 fi
 
+# anyenv
+if [ "type anyenv" > /dev/null 2>&1 ] && [ -d ~/.anyenv ]; then
+	export PATH="$HOME/.anyenv/bin:$PATH"
+	eval "$(anyenv init -)"
+fi
+
 # Composer
 if [ "type composer" > /dev/null 2>&1 ] && [ -d ~/.composer ]; then
   export PATH="$HOME/.composer/vendor/bin:$PATH"
