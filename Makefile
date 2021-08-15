@@ -12,6 +12,7 @@ deploy: ## Deploy this dotfiles
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
 	ln -vsf ${PWD}/.zshenv ${HOME}/.zshenv
 	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
+	ln -vsf ${PWD}/.zprofile ${HOME}/.zprofile
 	ln -vsf ${PWD}/tmux/.tmux.conf.cygwin ${HOME}/.tmux.conf.cygwin
 	ln -vsf ${PWD}/tmux/.tmux.conf.osx ${HOME}/.tmux.conf.osx
 
