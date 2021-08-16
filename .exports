@@ -23,35 +23,35 @@ export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOM
 
 
 # rbenv
-if [ "type rbenv" > /dev/null 2>&1 ]; then
+if command -v "rbenv" > /dev/null 2>&1 ; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
  
 # pyenv
-if [ "type pyenv" > /dev/null 2>&1 ]; then
+if command -v "pyenv" > /dev/null 2>&1 ; then
   eval "$(pyenv init --path)"
 fi
 
 # nodenv
-if [ "type nodenv" > /dev/null 2>&1 ]; then
+if command -v "nodenv" > /dev/null 2>&1 ; then
   export PATH="$HOME/.nodenv/bin:$PATH"
   eval "$(nodenv init -)"
 fi
 
 # anyenv
-if [ "type anyenv" > /dev/null 2>&1 ]; then
+if command -v "anyenv" > /dev/null 2>&1 ; then
   export PATH="$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
 fi
 
 # Composer
-if [ "type composer" > /dev/null 2>&1 ]; then
+if command -v "composer" > /dev/null 2>&1 ; then
   export PATH="$HOME/.composer/vendor/bin:$PATH"
 fi
 
 # fastlane
-if [ "type fastlane" > /dev/null 2>&1 ]; then
+if command -v "fastlane" > /dev/null 2>&1 ; then
   export PATH="$HOME/.fastlane/bin:$PATH"
 fi
 
