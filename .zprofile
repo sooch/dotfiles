@@ -1,3 +1,5 @@
+# Loaded only once for login shells.
+
 ##############################
 # loading files
 ##############################

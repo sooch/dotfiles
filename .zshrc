@@ -1,3 +1,5 @@
+# It's only loaded for login shells and interactive shells.
+
 ##############################
 # autoloads
 ##############################
