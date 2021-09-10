@@ -4,3 +4,5 @@
 [alias]
 	st = status -bs
 	co = checkout
+[pull]
+	rebase = false
