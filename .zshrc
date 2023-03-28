@@ -20,6 +20,17 @@ PROMPT="%{${fg[blue]}%}[%n@%m]%{${reset_color}%} %~
 
 
 ##############################
+# loading files
+##############################
+for file in ~/.{aliases,exports}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
+##############################
 # color scheme
 ##############################
 # Cygwin with Windows
@@ -76,3 +87,4 @@ export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
+
